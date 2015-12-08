@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自动化运维管理</title>
+    <script type="text/javascript" charset="UTF-8" src="assets/js/login/prefixfree.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="assets/js/jquery/jquery-1.11.3.js"></script>
+    <link href="assets/css/login.css" rel="stylesheet" />
+    <script type="text/javascript" charset="utf-8" src="assets/js/login/business.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="content">
+        <form class="login-form">
+            <div class="username">
+                <input type="text" id="username" placeholder="登录名/邮箱" onfocus="$('#username').css('borderColor','')" autocomplete="on" />
+                <span class="user-icon icon">u</span>
+            </div>
+            <div class="password">
+                <input type="password" onfocus="$('#password').css('borderColor','')" id="password" placeholder="" />
+                <span class="password-icon icon">p</span>
+            </div>
+            <div class="account-control">
+                <button id="subBtn" type="submit" onclick="return false;">登录</button>
+            </div>
+
+            <p class="not-registered">是一个新用户？<a id="register">注册</a></p>
+        </form>
+    </div>
+    <!--     new Spinner().spin(document.getElementById('preview'));-->
+
+
+    <fieldset class="register-div">
+
+        <ul>
+            <li>
+                <input id="regUname" type="text" placeholder="用户名" />
+            </li>
+            <li>
+                <input id="regNikname" type="text" placeholder="昵称" />
+            </li>
+            <li>
+                <input id="regPwd" type="password" placeholder="密码" />
+
+            </li>
+            <li>
+                <input id="regCPwd" type="password" placeholder="确认密码" />
+
+            </li>
+            <li>
+                <input id="regEmail" type="email" placeholder="邮箱" />
+            </li>
+            <li>
+                <label>性别：</label>
+                <input type="radio" name="sexgroup" value="1" checked/>男
+                <input type="radio" name="sexgroup" value="0" />女
+
+            </li>
+            <li>
+                <button id="registerBtn" class="btn">注册</button>
+                <button id="closeBtn" class="btn">取消</button>
+            </li>
+
+        </ul>
+    </fieldset>
+
+
+
+
+</body>
+
+</html>

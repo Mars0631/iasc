@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset=utf-8>
+
+    <title>IASC</title>
+    <script type="text/javascript" src="assets/js/jquery-1.4.2.js" />
+    <link href="assets/css/main.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+    <script type="text/javascript" charset="gb2312">
+        if (!window.WebSocket) {
+            alert("No Support ");
+        } else {
+            alert("OK");
+        }
+        var ws;
+        $(document).ready(function() {
+
+            startWebSocket();
+
+        })
+
+        function startWebSocket() {
+            alert("execute!");
+            ws = new WebSocket("ws://localhost:8080");
+            ws.onopen = function() {
+                console.log("open!!");
+                ws.send("hello" + Math.random().toFixed(2));
+            };
+
+            ws.onclose = function(evt) {
+                console.log("closed!!");
+            };
+
+            ws.onmessage = function(evt) {
+                console.log(evt.data);
+            };
+            ws.onerror = function(evt) {
+                console.log(“WebSocketError!”);
+            };
+        }
+        
+        
+
+    </script>
+</body>
+
+</html>

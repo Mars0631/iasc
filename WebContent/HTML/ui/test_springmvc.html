@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset=utf-8>
+
+    <title>SpringMVC</title>
+    <script type="text/javascript" src="assets/js/jquery/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("button").click(function() {
+
+                $.ajax({
+                    data: "num=章三",
+                    url: "http://localhost:8080/iasc_java/test",
+                    type: "post",
+                    dataType: "html",
+                    error: function(xhr, textStatus, errorThrown) {
+                        //                        alert(xhr.status);
+                        //                        alert(xhr.readyState);
+                        //                        alert(textStatus);
+                    },
+                    success: function(data, status) {
+                        if (status == "success") {
+                            var objs = jQuery.parseJSON(data);
+                            var str = "";
+                            for (var i = 0; i < objs.length; i++) {
+                                str += objs[i].activityName + " ";
+                            }
+
+                            $("#content").html(str);
+                        }
+                    }
+
+                });
+            });
+
+        });
+
+    </script>
+</head>
+
+
+<body>
+
+    <button type="button" id="#btn">访问ajax</button>
+    <div id="content"></div>
+</body>
+
+
+</html>

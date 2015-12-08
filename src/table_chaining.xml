@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 当表创建完成之后，配置需要执行的其他sql？ -->
+<!-- 比如角色表创建完成后，可通过此xml配置一个默认的角色，供注册用户默认的角色 -->
+<!-- 还有菜单的结构可通过此xml配置出默认的菜单 -->
+
+<tables>
+	<table name="C_SYS_ROLE">
+		<insert
+			sql="INSERT INTO C_SYS_ROLE(ROLE_NAME,ROLE_DESC) VALUES('默认角色','新用户初始化角色')" />
+	</table>
+</tables>

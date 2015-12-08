@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 表配置xml -->
+<tables>
+	<!-- C_SYS_USER -->
+	<table name="C_SYS_USER">
+		<field name="USER_ID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="LOGIN_NAME" type="VARCHAR(20)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="Login_PWD" type="VARCHAR(20)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="NIKE_NAME" type="VARCHAR(20)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+		<field name="EMAIL" type="VARCHAR(50)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+		<field name="SEX" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+	</table>
+
+	<!-- C_SYS_ROLE -->
+	<table name="C_SYS_ROLE">
+		<field name="ROLE_ID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="ROLE_NAME" type="VARCHAR(30)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="ROLE_DESC" type="VARCHAR(100)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+	</table>
+
+	<!-- C_SYS_MENU -->
+	<table name="C_SYS_MENU">
+		<field name="MENU_ID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="MENU_NAME" type="VARCHAR(30)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+		<field name="PARENT_MENU_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+	</table>
+
+	<!-- R_ROLE_MENU_MAP -->
+	<table name="R_ROLE_MENU_MAP">
+		<field name="OID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="ROLE_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="MENU_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+	</table>
+
+	<!-- R_ROLE_USER_MAP -->
+	<table name="R_ROLE_USER_MAP">
+		<field name="OID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="ROLE_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="USER_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+	</table>
+
+
+	<!-- L_SYS_INFO -->
+	<table name="L_SYS_INFO">
+		<field name="OID" type="INT" isPrimarykey="true"
+			isPrimarykeyGenerate="true" isNotNull="true" />
+		<field name="TIME_STAMP" type="VARCHAR(30)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="ACTION" type="VARCHAR(30)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="USER_ID" type="INT" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="true" />
+		<field name="USER_IP" type="VARCHAR(30)" isPrimarykey="false"
+			isPrimarykeyGenerate="false" isNotNull="false" />
+	</table>
+</tables>

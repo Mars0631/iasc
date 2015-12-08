@@ -1,0 +1,190 @@
+@keyframes colorcycle {
+    from {
+        background-color: #80A060;
+    }
+    to {
+        background-color: firebrick;
+    }
+}
+html,
+a,
+hgroup > h1 > strong,
+section > h1 {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+pre,
+code,
+textarea {
+    font-family: Consolas, Monaco, monospace;
+}
+hgroup > h1,
+section > h1 {
+    color: firebrick;
+    text-shadow: .05em .05em slategray;
+}
+
+/**
+ * Styles
+ */
+
+* {
+    margin: 0;
+}
+html {
+    background-color: darkslategrey;
+    background-image: linear-gradient(90deg, transparent 50%, white 50%), repeating-linear-gradient(61deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .15) 40px, transparent 40px, transparent 80px);
+}
+body {
+    position: static;
+    max-width: 900px;
+    font-family: monospace;
+    height: 1500px;
+    padding: 2em 4em;
+    margin: auto;
+    background: white;
+    font: 100%/1.6 Arvo, sans-serif;
+    text-shadow: 0 1px white;
+    hyphens: auto;
+    box-shadow: -8px 0 15px -8px rgba(0, 0, 0, .5);
+}
+a {
+    color: slategray;
+    font-weight: bold;
+}
+a:hover {
+    color: firebrick;
+}
+header,
+hgroup,
+section,
+footer {
+    display: block;
+}
+p {
+    margin: .5em 0;
+}
+ul {
+    list-style: none;
+    padding-left: 1.9em;
+    margin: 1em 0;
+}
+nav {
+    position: relative;
+    margin: 1em 0 1em -3em;
+    font-size: 160%;
+    background: #111;
+    background: linear-gradient(90deg, #000, black 50%);
+    color: #111;
+    text-align: right;
+    text-shadow: none;
+    box-shadow: 5px 5px 10px -5px black;
+}
+nav:after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    bottom: -12px;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    border: 12px solid transparent;
+    border-right-color: black;
+}
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+nav > ul > li {
+    display: inline;
+}
+nav > ul > li:before {
+    content: none;
+}
+nav > ul > li > a {
+    display: inline-block;
+    padding: .2em .6em;
+    color: white;
+    text-decoration: none;
+    text-shadow: .1em .1em black;
+}
+nav > ul > li > a:hover {
+    background: firebrick;
+    color: white;
+}
+fieldset {
+    border-style: none;
+}
+.vtd {
+    font-family: monospace;
+    color: black;
+    /*    text-shadow: 1px 1px 1px #cccccc;*/
+}
+.table {
+    font: 13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.table td,
+.table th {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+}
+.thead th {
+    background: #91c5d4;
+}
+.thead th[colspan],
+.thead th[rowspan] {
+    background: #66a9bd;
+}
+.tbody th,
+.tfoot th {
+    text-align: left;
+    background: #91c5d4;
+}
+.tbody td,
+.tfoot td {
+    text-align: center;
+    background: #d5eaf0;
+    font-size: 10px;
+}
+.tfoot th {
+    background: #b0cc7f;
+}
+.tfoot td {
+    vertical-align: middle;
+    background: #d7e1c5;
+    font-weight: bold;
+}
+.tbody tr.odd td {
+    background: #bcd9e1;
+}
+.status {
+    width: 20px;
+}
+
+/* user define */
+
+#content1 {
+    background: #fd1;
+    margin: 10px auto;
+    font-size: 1.1em;
+}
+
+/* Pages */
+
+body.home .page,
+body.in-page > .section-container,
+body.in-page > section:not(.current) {
+    display: none;
+}
+
+/* end pages */
+
+footer {
+    font-size: 130%;
+    text-align: center;
+}

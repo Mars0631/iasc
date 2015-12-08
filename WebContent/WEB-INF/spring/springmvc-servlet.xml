@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd   
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       ">
+
+	<!-- 加载Spring的全局配置文件 -->
+	<import resource="root-context.xml" />
+	<!-- 加载app配置文件 -->
+	<import resource="application-context.xml" />
+
+	<!-- 静态资源过滤(必须配置annotation-driven)
+		
+		!!!这里注意区分在spring的主配置中 用<context:annotation-config/>  
+		   在springmvc的配置文件中用 <mvc:annotation-driven/>
+	 -->
+ 	<!-- 默认的注解映射的支持 -->  
+    <mvc:annotation-driven /> 
+    <mvc:resources mapping="/assets/css/*" location="/HTML/ui/assets/css/" cache-period="31556926"/> 
+    <mvc:resources mapping="/assets/js/**" location="/HTML/ui/assets/js/" cache-period="31556926"/> 
+    <mvc:resources mapping="/assets/images/**" location="/HTML/ui/assets/images/" cache-period="31556926"/> 
+	
+	<!-- 配置拦截器 -->
+	<!-- <mvc:interceptors> -->
+	<!-- <mvc:interceptor> -->
+	<!-- <mvc:mapping path="/**" /> -->
+	<!-- <bean class="com.iasc.core.base.BaseUrlInterceptor"> -->
+	<!-- <property name="allowUrls"> -->
+	<!-- <list> -->
+	<!-- <value>/index</value> -->
+	<!-- </list> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<!-- </mvc:interceptor> -->
+	<!-- </mvc:interceptors> -->
+   
+	<!-- 扫描注解所在位置 -->
+	<context:component-scan base-package="com.iasc.analyse.login" />
+	
+	<!-- 完成请求和注解POJO的映射 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/HTML/ui/" p:suffix=".html" />
+
+</beans>

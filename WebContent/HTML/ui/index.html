@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset=utf-8>
+
+    <title>IASC</title>
+    <script type="text/javascript" src="assets/js/json/json2.js"></script>
+    <script type="text/javascript" src="assets/js/fusioncharts/fusioncharts.js"></script>
+    <script type="text/javascript" src="assets/js/socket/socket.io.js" />
+    <script type="text/javascript" src="assets/js/fusioncharts/themes/fusioncharts.theme.fint.js"></script>
+    <script type="text/javascript" src="assets/js/business/business.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/js/jquery/jquery-1.11.3.js"></script>
+    <link type="text/css" href="assets/css/main.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="assets/css/hosting.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#">服务器状态</a></li>
+            <li><a href="#">Glassfish</a></li>
+            <li><a href="#">Bone</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+
+        <div class="row-fluid">
+
+            <div class="span4 PlanPricing template4">
+                <div class="planName"> <span class="price"><a href="#Signup" role="button">更多</a></span>
+                    <h3>操作系统</h3>
+                    <p>Operation System</p>
+                </div>
+                <div class="planFeatures">
+                    <table style="padding-left:30px;text-align: left;">
+                        <tr>
+                            <td>系统</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">Mac os x</td>
+                        </tr>
+                        <tr>
+                            <td>架构</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">x86_64</td>
+                        </tr>
+
+                        <tr>
+                            <td>系统类型</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">MacOSX</td>
+                        </tr>
+                        <tr>
+                            <td>厂商</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">Apple</td>
+                        </tr>
+                        <tr>
+                            <td>系统版本号</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">10.11.1</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--
+                <div class="planFeatures">
+                  
+                </div>
+-->
+            </div>
+
+            <div class="span4 PlanPricing template4">
+                <div class="planName"> <span class="price"><a href="#Signup" role="button">更多</a></span>
+                    <h3>CPU</h3>
+                    <p>Central Processing Unit</p>
+                </div>
+                <div class="planFeatures">
+                    <table style="padding-left:30px;text-align: left;">
+                        <tr>
+                            <td>cpu频率(Mhz)</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">2200</td>
+                        </tr>
+                        <tr>
+                            <td>cpu类型</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">Intel</td>
+                        </tr>
+                        <tr>
+                            <td>核心数量</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">8</td>
+                        </tr>
+                        <tr>
+                            <td>字节序</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">little</td>
+                        </tr>
+                        <tr>
+                            <td>缓冲存储器大小</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">256</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <!--
+                <div class="planFeatures">
+    <p> <a href="#Signup" role="button" data-toggle="modal" style="padding-top:4px;">详细</a> </p>
+</div>
+-->
+            </div>
+
+            <div class="span4 PlanPricing template4">
+                <div class="planName"> <span class="price"><a href="#Signup" role="button">更多</a></span>
+                    <h3>内存/磁盘</h3>
+                    <p>Memory/Disk</p>
+                </div>
+                <div class="planFeatures">
+                    <table style="padding-left:30px;text-align: left;">
+                        <tr>
+                            <td>内存总量</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">2200</td>
+                        </tr>
+                        <tr>
+                            <td>交换区总量</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">256</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr dashed style="height:1px;border:none;border-top:1px  #0066CC;" color="#cccccc" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>磁盘总量</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">2200</td>
+                        </tr>
+                        <tr>
+                            <td>磁盘分区数</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">2</td>
+                        </tr>
+                        <tr>
+                            <td>文件系统类型</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="vtd">本地硬盘</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--
+                <div class="planFeatures">
+    <p> <a href="#Signup" role="button" data-toggle="modal" style="padding-top:4px;">详细</a> </p>
+</div>
+-->
+                <br>
+            </div>
+
+        </div>
+        <fieldset>
+            <legend>
+                <h3>运行状态</h3></legend>
+            <div id="chart-container-cpu" style="float:left;padding-right:30px;padding-left:10px"></div>
+            <div id="chart-container-disk" style=""></div>
+            <div id="chart-container-memory" style=""></div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>进程状态</h3></legend>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col" rowspan="2">进程名称</th>
+                        <th scope="col" colspan="4">进程信息</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">进程Pid</th>
+                        <th scope="col">进程PPid</th>
+                        <th scope="col">启动时间</th>
+                        <th scope="col">运行状态</th>
+                    </tr>
+                </thead>
+                <tfoot class="tfoot">
+                    <th scope="row">说明</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <img src="assets/images/status/clear-green-button.png" style="width:15px;" align="absbottom" />运行&nbsp;
+                        <img src="assets/images/status/minus-red-button.png" style="width:15px" align="absbottom" />停止
+
+                    </td>
+                </tfoot>
+
+                <tbody class="tbody">
+                    <tr>
+                        <th scope="row">进程1</th>
+                        <td>2512</td>
+                        <td>142</td>
+                        <td>10:14</td>
+                        <td><img src="assets/images/status/clear-green-button.png" class="status" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">进程2</th>
+                        <td>2512</td>
+                        <td>142</td>
+                        <td>10:14</td>
+                        <td><img src="assets/images/status/clear-green-button.png" class="status" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">进程3</th>
+                        <td>2512</td>
+                        <td>142</td>
+                        <td>10:14</td>
+                        <td><img src="assets/images/status/clear-green-button.png" class="status" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">进程4</th>
+                        <td>2512</td>
+                        <td>142</td>
+                        <td>10:14</td>
+                        <td><img src="assets/images/status/clear-green-button.png" class="status" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">进程5</th>
+                        <td>2512</td>
+                        <td>142</td>
+                        <td>10:14</td>
+                        <td>
+                            <img src="assets/images/status/minus-red-button.png" alt="1212" class="status" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <script>
+                $(document).ready(function() {
+                    $('tbody tr').hover(function() {
+                        $(this).addClass('odd');
+                    }, function() {
+                        $(this).removeClass('odd');
+                    });
+                });
+
+            </script>
+
+        </fieldset>
+
+
+    </div>
+
+
+
+    <fieldset>
+        <legend>
+            <h3>其他</h3>
+        </legend>
+    </fieldset>
+</body>
+
+</html>
